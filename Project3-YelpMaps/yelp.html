@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!-- Saurabh Singh: 1001568347  -->
+
+<html lang="en">
+  <head>
+    <title>Web Mashup: Display Best Restaurants on a Map</title>
+	<meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8"/>
+	<style>
+      <!-- /* Always set the map height explicitly to define the size of the div -->
+       <!-- * element that contains the map. */ -->
+      #map {
+        height: 100%;
+      }
+    </style>
+    <script type="text/javascript" src="yelp.js"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAp_5ELBjgIwPfFe8FhR00CmWEFqYPLt7E&callback=initMap&libraries=geometry" type="text/javascript"></script>
+  </head>
+  <body onload="initialize();">
+    <form>
+       <label>Search Terms: <input type="text" id="search"/></label>
+       <input type="button" onclick="sendRequest();" value="Find"/>
+    </form>
+	<table>
+		<tr>
+			<td style="vertical-align: top;">
+				<div id="map" style="width:600px;height:500px;"></div>
+			</td>
+			<td style="vertical-align: top;">
+				<div id="output">&nbsp;</div>
+			</td>
+		</tr>		
+	</table>
+  </body>
+</html>
